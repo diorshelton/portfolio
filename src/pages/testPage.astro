@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "@radix-ui/themes/styles.css";
+import { Box, Flex, Text } from "@radix-ui/themes";
+import { Button } from "@radix-ui/themes";
+import { Card } from "@radix-ui/themes";
+import Nav from "../components/Nav.astro";
+---
+
+<Layout title="test">
+	<Flex gap="5" direction="column">
+		<Box width="350px">
+			<Card size="4">
+				<Flex gap="3">
+					<Box width="243px">
+						<Text as="div" weight="bold">Dior</Text>
+					</Box>
+					<Button size="3" variant="soft">View Code</Button>
+				</Flex>
+			</Card>
+		</Box>
+    <Nav></Nav>
+	</Flex>
+</Layout>
