@@ -5,7 +5,8 @@ import { Box, Flex, Text } from "@radix-ui/themes";
 import { Button } from "@radix-ui/themes";
 import { Card } from "@radix-ui/themes";
 import Nav from "../components/Nav.astro";
-import MobileNav from "../components/mobileNav.astro";
+import MobileNav from "../components/MobileNav.astro";
+import MobileNavBar from "../components/MobileNavBar.jsx";
 ---
 
 <Layout title="test">
@@ -21,6 +22,6 @@ import MobileNav from "../components/mobileNav.astro";
 			</Card>
 		</Box>
     <Nav></Nav>
-    <MobileNav/>
 	</Flex>
+  <MobileNav/>
 </Layout>
