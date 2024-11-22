@@ -1,33 +1,63 @@
 ---
-import { Card, Box, Flex, Text, Button, Heading } from "@radix-ui/themes";
+import {
+	Card,
+	Box,
+	Flex,
+	Text,
+	Button,
+	Heading,
+	Section,
+	Container,
+	AspectRatio,
+} from "@radix-ui/themes";
 import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import profilefoto from "../../public/foto.jpeg";
 ---
 
 <Layout title="About">
-  <Box className="box"  height="450px">
-    <Heading align="center" as="h2" size="8">About me</Heading>
-    <Text  align="left" as="p" size="6"weight="regular">Hi</Text>
-    <Box>
-      <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum tenetur quisquam veritatis ullam dignissimos vel porro in error ipsa, delectus, doloremque nulla odit molestiae laboriosam? Soluta possimus at et est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum eligendi quisquam officiis qui maxime exercitationem maiores est? Laboriosam officiis debitis aliquid distinctio tenetur. Possimus temporibus amet molestiae earum enim!</Text>
-    </Box>
-  </Box>
-  <Box className="box2" height="450px">
-    <Heading align="center" as="h2" size="8">Projects</Heading>
-    <Text as="p" size="6"weight="regular">Recent Projects</Text>
+	<Box className="about-container">
+		<Heading className="heading" align="center" as="h2" size="8">About</Heading
+		>
+		<Container>
+			<Flex className="flex-container" align="center" justify={"center"}>
+				<Box className="photo-box-container">
+					<Image class="foto" src={profilefoto} alt="profile picture" />
+				</Box>
+				<Box maxWidth={"450px"}>
+					<Text className="about-text" as="p">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+						tenetur quisquam veritatis ullam dignissimos vel porro in error
+						ipsa, delectus, doloremque nulla odit molestiae laboriosam? Soluta
+						possimus at et est. Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Et cum eligendi quisquam officiis qui maxime
+						exercitationem maiores est? Laboriosam officiis debitis aliquid
+						distinctio tenetur. Possimus temporibus amet molestiae earum enim!</Text
+					>
+				</Box>
+			</Flex>
+		</Container>
 	</Box>
-  <Box className="box3" height="450px">
-    <Heading align="center" as="h2" size="8">Writing</Heading>
-    <Text align={"right"} as="p" size="6"weight="regular">Blog Posts</Text>
-  </Box>
 </Layout>
 <style>
- .box {
-  background-color: antiquewhite;
- }
- .box2 {
-  background-color: rgb(185, 124, 45);
- }
- .box3 {
-  background-color: rgb(237, 140, 12);
- }
+	img {
+		padding: 1rem;
+		display: block;
+		max-width: 40rem;
+		max-height: 40rem;
+		width: auto;
+		height: auto;
+	}
+	.flex-container {
+		@media (width <= 650px) {
+			flex-direction: column;
+		}
+	}
+	.about-text {
+		padding: 3rem;
+		text-indent: 20%;
+	}
+	.heading {
+		padding: 2rem;
+	}
 </style>
