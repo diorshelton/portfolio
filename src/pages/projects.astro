@@ -1,0 +1,34 @@
+---
+import {
+	Box,
+	Flex,
+	Text,
+	Button,
+	Heading,
+	Section,
+	Container,
+} from "@radix-ui/themes";
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+import profilefoto from "../../public/foto.jpeg";
+---
+
+<Layout title="Projects">
+	<Box className="projects-container">
+		<Heading className="heading" align="center" as="h2" size="8">Projects</Heading
+		>
+		<Container>
+			<Flex className="flex-container" align="center" justify={"center"}>
+				<Box className="photo-box-container">
+				</Box>
+				<Box>
+				</Box>
+			</Flex>
+		</Container>
+	</Box>
+</Layout>
+<style>
+	.heading {
+		padding: 2rem;
+	}
+</style>
