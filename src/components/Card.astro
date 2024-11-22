@@ -1,13 +1,13 @@
 ---
+import { Heading, HoverCard, Text } from '@radix-ui/themes';
+
 interface Props {
 	title: string;
 	body: string;
 	href: string;
 }
-
 const { href, title, body } = Astro.props;
 ---
-
 <li class="link-card">
 	<a href={href}>
 		<h2>
@@ -50,12 +50,5 @@ const { href, title, body } = Astro.props;
 	p {
 		margin-top: 0.5rem;
 		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
 	}
 </style>

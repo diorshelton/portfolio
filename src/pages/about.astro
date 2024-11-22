@@ -1,0 +1,33 @@
+---
+import { Card, Box, Flex, Text, Button, Heading } from "@radix-ui/themes";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About">
+  <Box className="box"  height="450px">
+    <Heading align="center" as="h2" size="8">About me</Heading>
+    <Text  align="left" as="p" size="6"weight="regular">Hi</Text>
+    <Box>
+      <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum tenetur quisquam veritatis ullam dignissimos vel porro in error ipsa, delectus, doloremque nulla odit molestiae laboriosam? Soluta possimus at et est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et cum eligendi quisquam officiis qui maxime exercitationem maiores est? Laboriosam officiis debitis aliquid distinctio tenetur. Possimus temporibus amet molestiae earum enim!</Text>
+    </Box>
+  </Box>
+  <Box className="box2" height="450px">
+    <Heading align="center" as="h2" size="8">Projects</Heading>
+    <Text as="p" size="6"weight="regular">Recent Projects</Text>
+	</Box>
+  <Box className="box3" height="450px">
+    <Heading align="center" as="h2" size="8">Writing</Heading>
+    <Text align={"right"} as="p" size="6"weight="regular">Blog Posts</Text>
+  </Box>
+</Layout>
+<style>
+ .box {
+  background-color: antiquewhite;
+ }
+ .box2 {
+  background-color: rgb(185, 124, 45);
+ }
+ .box3 {
+  background-color: rgb(237, 140, 12);
+ }
+</style>
