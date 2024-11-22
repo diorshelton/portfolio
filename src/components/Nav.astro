@@ -1,37 +1,43 @@
 ---
-import { Box, Button, Container, Flex, Heading, Link, Separator } from "@radix-ui/themes";
+import {
+	Box,
+	Container,
+	Flex,
+	Heading,
+	Link,
+	Separator,
+} from "@radix-ui/themes";
 ---
 
-<Box className="nav">
-  <Container className="mellon"size="4">
-    <Flex className="container-contents" gap="4" align="center">
-      <img class="logo" src="/logo.svg" alt="site logo">
-      <Heading as="h1" size=8>Dior Shelton</Heading>
-        <Link className="link-item" href="#">About</Link>
-        <Separator orientation="vertical"/>
-        <Link className="link-item" href="#">Projects</Link>
-        <Separator orientation="vertical"/>
-        <Link className="link-item" href="#">Writing</Link>
-    </Flex>
-  </Container>
-</Box>
+<nav class="nav">
+	<Container size="3">
+		<Box>
+			<Flex className="logo" gap="3" align="center">
+				<img class="log-image" src="/logo.svg" alt="opening and closing html tags" />
+				<Heading className="logo-heading" as="h1" size="8">Dior Shelton</Heading
+				>
+			</Flex>
+			<Box className="container">
+        <Flex gap="5" align="center" direction="row-reverse">
+          <Link size="5" className="link-item" href="#">About</Link>
+					<Separator orientation="vertical" />
+					<Link size="5" className="link-item" href="#">Writing</Link>
+					<Separator orientation="vertical" />
+					<Link size="5" className="link-item" href="#">Projects</Link>
+				</Flex>
+			</Box>
+    </Box>
+	</Container>
+</nav>
 <style>
-  .nav {
-    border: solid rgb(128, 128, 128) 3px;
-    padding:  1rem;
-    border-radius: 24px;
-    margin: 0;
-  }
-  .container-contents {
-    display: inline-flex;
-    /* justify-content: space-evenly; */
-  }
-  img {
-    /* margin-block: 2.5rem; */
-    /* border-radius: 0.75rem; */
-    /* line-height: 4px; */
-    justify-content: space-between;
-    height: 45px;
-    width: 45px;
-  }
+	.nav {
+		padding: 0.5rem 1rem;
+	}
+	.heading {
+		padding-right: 3rem;
+	}
+	img {
+		height: 4.0625rem;
+		width: 4.0625rem;
+	}
 </style>
