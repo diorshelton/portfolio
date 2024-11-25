@@ -7,13 +7,15 @@ import {
 	Link,
 	Separator,
 } from "@radix-ui/themes";
+import logo from "../../public/assets/logo.svg"
+import { Image } from "astro:assets";
 ---
 
 <nav class="nav">
 	<Container size="3">
 		<Box>
-			<Flex className="logo" gap="3" align="center">
-				<img class="log-image" src="/logo.svg" alt="opening and closing html tags" />
+			<Flex  gap="3" align="center">
+				<Image src={logo} alt="opening and closing html tags"></Image>
 				<Heading className="logo-heading" as="h1" size="8">Dior Shelton</Heading
 				>
 			</Flex>
