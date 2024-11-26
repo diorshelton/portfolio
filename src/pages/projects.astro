@@ -1,17 +1,14 @@
 ---
 import {
 	Box,
-	Flex,
-	Text,
 	Heading,
-	Section,
 	Container,
+	Grid,
 } from "@radix-ui/themes";
 import Layout from "../layouts/Layout.astro";
 import cfc_logo_short from "../../public/assets/cfc_logo_short.svg";
-import rocket from "../../public/assets/rocket.svg";
 import double_chat_bubble_icon from "../../public/assets/double_chat_bubble_icon.svg";
-import Image from "astro/components/Image.astro";
+import rocket_logo from "../../public/assets/rocket_logo.svg"
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
@@ -21,19 +18,19 @@ import ProjectCard from "../components/ProjectCard.astro";
 			>Projects</Heading
 		>
 		<Container>
-			<Flex className="flex-container" align="center" justify={"center"}>
+			<Grid columns={{xs:"1",sm:"2", md:"3",}} gap="4" className="grid-container">
 				<ProjectCard
 					alt={"Code For Chicago logo"}
 					gitHubLink={"#"}
 					src={cfc_logo_short}
-					projectDescription={"Civic Tech Organization building digital services for the city of Chicago."}
+					projectDescription={"Civic Tech Organization building digital services for the city of Chicago"}
 					projectTitle={"Code For Chicago"}
 					siteLink={"#"}
 				/>
 				<ProjectCard
 					alt={"Far logo"}
 					gitHubLink={"#"}
-					src={rocket}
+					src={rocket_logo}
 					projectDescription={"React project that fetches data from the Solar System API"}
 					projectTitle={"Far"}
 					siteLink={"#"}
@@ -46,7 +43,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 					projectTitle={"Say"}
 					siteLink={"#"}
 				/>
-			</Flex>
+			</Grid>
 		</Container>
 	</Box>
 </Layout>

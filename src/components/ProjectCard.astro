@@ -1,5 +1,5 @@
 ---
-import { Card, Flex, Heading, Link, Text } from "@radix-ui/themes";
+import { Box, Card, Flex, Heading, Link, Text } from "@radix-ui/themes";
 import Image from "astro/components/Image.astro";
 
 const { alt, gitHubLink, src, projectDescription, projectTitle, siteLink } =
@@ -7,19 +7,21 @@ const { alt, gitHubLink, src, projectDescription, projectTitle, siteLink } =
 ---
 
 <Card size="5" className="project-box">
-	<Image class="logo" alt={alt} src={src} />
-	<Heading as="h3" size="5">
-		<Text>{projectTitle}</Text>
-	</Heading>
-	<Text>{projectDescription}</Text>
-	<Flex>
-		<Link className="project-link" underline="always" href={gitHubLink}
-			>View on Github</Link
-		>
-		<Link className="project-link" href={siteLink} underline="always"
-			>View Project</Link
-		>
-	</Flex>
+	<Box maxWidth="20rem" minWidth="5rem">
+		<Image class="logo" alt={alt} src={src} />
+		<Heading as="h3" size="5">
+			<Text>{projectTitle}</Text>
+		</Heading>
+		<Text>{projectDescription}</Text>
+		<Flex direction={"column"}>
+			<Link className="project-link" underline="always" href={gitHubLink}
+				>View on Github</Link
+			>
+			<Link className="project-link" href={siteLink} underline="always"
+				>View Project</Link
+			>
+		</Flex>
+	</Box>
 </Card>
 <style>
 	.project-box {
