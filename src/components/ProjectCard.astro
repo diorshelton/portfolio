@@ -6,34 +6,46 @@ const { alt, gitHubLink, src, projectDescription, projectTitle, siteLink } =
 	Astro.props;
 ---
 
-<Card size="5" className="project-box">
+<Card size="4" className="project-box">
 	<Box maxWidth="20rem" minWidth="5rem">
 		<Image class="logo" alt={alt} src={src} />
-		<Heading as="h3" size="5">
+		<Heading className="heading-h3" as="h3" size="5">
 			<Text>{projectTitle}</Text>
 		</Heading>
-		<Text>{projectDescription}</Text>
-		<Flex direction={"column"}>
-			<Link className="project-link" underline="always" href={gitHubLink}
-				>View on Github</Link
-			>
-			<Link className="project-link" href={siteLink} underline="always"
-				>View Project</Link
-			>
+		<Flex className="text-and-links" direction={"column"}>
+			<Text className="text-description">{projectDescription}</Text>
+			<Flex direction="column" className="links">
+				<Link className="project-link" href={gitHubLink}
+					>View on Github</Link
+				>
+				<Link className="project-link" href={siteLink} 
+					>View Project</Link
+				>
+			</Flex>
 		</Flex>
 	</Box>
 </Card>
 <style>
+	.links {
+		padding-top: 2rem;
+	}
+	.text-and-links {
+		padding-bottom: 0rem;
+	}
 	.project-box {
 		min-height: 345px;
 		margin: 0.5rem;
 	}
+	.heading-h3 {
+		padding: 0rem 0rem 0.75rem;
+	}
 	.project-link {
-		margin: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
 	}
 	.logo {
-		margin: 0px;
-		height: 4rem;
-		width: 4rem;
+		padding: 0rem 0rem 2rem;
+		height: 5rem;
+		width: 5rem;
 	}
 </style>
