@@ -3,32 +3,55 @@ import {
 	Box,
 	Flex,
 	Text,
-	Button,
 	Heading,
 	Section,
 	Container,
 } from "@radix-ui/themes";
 import Layout from "../layouts/Layout.astro";
+import cfc_logo_short from "../../public/assets/cfc_logo_short.svg";
+import rocket from "../../public/assets/rocket.svg";
+import double_chat_bubble_icon from "../../public/assets/double_chat_bubble_icon.svg";
 import Image from "astro/components/Image.astro";
-import profilefoto from "../../public/foto.jpeg";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="Projects">
 	<Box className="projects-container">
-		<Heading className="heading" align="center" as="h2" size="8">Projects</Heading
+		<Heading className="heading" align="center" as="h2" size="8"
+			>Projects</Heading
 		>
 		<Container>
 			<Flex className="flex-container" align="center" justify={"center"}>
-				<Box className="photo-box-container">
-				</Box>
-				<Box>
-				</Box>
+				<ProjectCard
+					alt={"Code For Chicago logo"}
+					gitHubLink={"#"}
+					src={cfc_logo_short}
+					projectDescription={"Civic Tech Organization building digital services for the city of Chicago."}
+					projectTitle={"Code For Chicago"}
+					siteLink={"#"}
+				/>
+				<ProjectCard
+					alt={"Far logo"}
+					gitHubLink={"#"}
+					src={rocket}
+					projectDescription={"React project that fetches data from the Solar System API"}
+					projectTitle={"Far"}
+					siteLink={"#"}
+				/>
+				<ProjectCard
+					alt={"Say logo"}
+					gitHubLink={"#"}
+					src={double_chat_bubble_icon}
+					projectDescription={"Text based chap application surrounding comments"}
+					projectTitle={"Say"}
+					siteLink={"#"}
+				/>
 			</Flex>
 		</Container>
 	</Box>
 </Layout>
 <style>
 	.heading {
-		padding: 2rem;
+		padding: 3rem;
 	}
 </style>
