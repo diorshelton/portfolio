@@ -18,7 +18,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 			>Projects</Heading
 		>
 		<Container>
-			<Grid columns={{xs:"1",sm:"2", md:"3",}} gap="4" className="grid-container">
+			<Grid columns={{xs:"2",sm:"3", md:"3",lg:"4"}} gap="4" className="grid-container">
 				<ProjectCard
 					alt={"Code For Chicago logo"}
 					gitHubLink={"#"}
@@ -33,6 +33,14 @@ import ProjectCard from "../components/ProjectCard.astro";
 					src={rocket_logo}
 					projectDescription={"React project that fetches data from the Solar System API"}
 					projectTitle={"Far"}
+					siteLink={"#"}
+				/>
+				<ProjectCard
+					alt={"Say logo"}
+					gitHubLink={"#"}
+					src={double_chat_bubble_icon}
+					projectDescription={"Text based social meadia aplication built around comments"}
+					projectTitle={"Say"}
 					siteLink={"#"}
 				/>
 				<ProjectCard
