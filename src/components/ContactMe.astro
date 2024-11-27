@@ -1,7 +1,48 @@
 ---
-import { Box } from "@radix-ui/themes";
-import { LinkedInLogoIcon, GitHubLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { Box, Flex, Heading } from "@radix-ui/themes";
+import {
+	LinkedInLogoIcon,
+	GitHubLogoIcon,
+	EnvelopeClosedIcon,
+} from "@radix-ui/react-icons";
 ---
-<Box>
-  <LinkedInLogoIcon fontSize={6}></LinkedInLogoIcon>
+
+<Box className="contact-me-container">
+    <Heading className="contact-me-heading" size="7">Find me @</Heading>
+		<LinkedInLogoIcon className="linkedin icon" />
+		<GitHubLogoIcon className="github icon" />
+		<EnvelopeClosedIcon className="email icon" />
 </Box>
+<style>
+  .icon {
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+  }
+  .icon:hover {
+    cursor: grab;
+  }
+	.contact-me-container {
+		padding-top: 3rem;
+	}
+	.contact-me-heading {
+    /* margin-top: -12rem; */
+		padding: .5rem;
+		text-align: center;
+	}
+  .flex-container {
+    @media screen < 950px{
+      flex-direction:row;
+    }
+  }
+	.github:hover {
+		color:  rgb(35, 134, 54, 1);
+	}
+	.linkedin:hover {
+		color: rgb(25, 30, 188);
+	}
+	.email:hover {
+		color: rgb(188, 25, 25);
+	}
+</style>

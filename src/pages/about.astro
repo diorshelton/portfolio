@@ -1,11 +1,5 @@
 ---
-import {
-	Box,
-	Flex,
-	Text,
-	Heading,
-	Container,
-} from "@radix-ui/themes";
+import { Box, Flex, Text, Heading, Container } from "@radix-ui/themes";
 import Layout from "../layouts/Layout.astro";
 import Image from "astro/components/Image.astro";
 import profilefoto from "../../public/assets/foto.jpeg";
@@ -14,25 +8,29 @@ import ContactMe from "../components/ContactMe.astro";
 
 <Layout title="About">
 	<Box className="about-container">
-		<Heading className="heading" align="center" as="h2" size="8">About</Heading
-		>
 		<Container>
-			<Flex className="flex-container" align="center" justify={"center"}>
+		<Heading className="heading" align="center" as="h2" size="8">About</Heading>
+			<Flex
+				direction="row"
+				className="flex-container"
+				align="center"
+				justify={"center"}
+			>
 				<Box className="photo-box-container">
 					<Image class="foto" src={profilefoto} alt="profile picture" />
 				</Box>
-				<Box maxWidth={"450px"}>
-					<Text className="about-text" as="p">
+				<Box maxWidth={"25rem"}>
+					<Text size="4" className="about-text" as="p">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
 						tenetur quisquam veritatis ullam dignissimos vel porro in error
 						ipsa, delectus, doloremque nulla odit molestiae laboriosam? Soluta
 						possimus at et est. Lorem ipsum dolor sit amet consectetur
 						adipisicing elit. Et cum eligendi quisquam officiis qui maxime
 						exercitationem maiores est? Laboriosam officiis debitis aliquid
-						distinctio tenetur. Possimus temporibus amet molestiae earum enim!</Text
-					>
-					<ContactMe></ContactMe>
+						distinctio tenetur. Possimus temporibus amet molestiae earum enim!
+					</Text>
 				</Box>
+				<ContactMe />
 			</Flex>
 		</Container>
 	</Box>
@@ -47,13 +45,15 @@ import ContactMe from "../components/ContactMe.astro";
 		height: auto;
 	}
 	.flex-container {
-		@media (width <= 650px) {
+		@media (width <= 950px) {
 			flex-direction: column;
+			align-items: center;
 		}
 	}
 	.about-text {
 		padding: 3rem;
 		text-indent: 20%;
+		margin-bottom: -4rem;
 	}
 	.heading {
 		padding: 3rem;
