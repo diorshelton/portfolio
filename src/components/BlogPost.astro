@@ -1,0 +1,32 @@
+---
+import { Box, Flex, Heading, Link, Text } from "@radix-ui/themes";
+const {date, blogTitle, blurb, href} = Astro.props;
+---
+
+<Box className="post">
+	<Link href="#">
+		<Heading size="6" weight="medium" className="heading-h3" as="h3">
+			<Text>{blogTitle}</Text>
+		</Heading>
+	</Link>
+	<Flex
+   pt="3" className="text-and-links" direction="column">
+		<Text size="5" className="blurb">{blurb}</Text>
+		<Flex pt="3" align="end" direction="column" className="link-date">
+			<Text>
+				<Link size="4" underline="always" className="project-link" href={href}
+					>Read article</Link
+				>
+			</Text>
+			<Text className="date" weight="light" size="3">{date}</Text>
+		</Flex>
+	</Flex>
+</Box>
+<style>
+	.post{
+		border-radius: var(--radius-2);
+		padding: 1rem;
+		box-shadow: var(--shadow-4);
+		margin-bottom: 3rem;
+	}
+</style>
