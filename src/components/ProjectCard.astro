@@ -15,12 +15,20 @@ const { alt, gitHubLink, src, projectDescription, projectTitle, siteLink } =
 		<Flex className="text-and-links" direction={"column"}>
 			<Text className="text-description">{projectDescription}</Text>
 			<Flex direction="column" className="links">
-				<Link className="project-link" href={gitHubLink}
-					>View on Github</Link
-				>
-				<Link className="project-link" href={siteLink} 
-					>View Project</Link
-				>
+				{
+					gitHubLink && (
+						<Link className="project-link" href={gitHubLink}>
+							View on GitHub
+						</Link>
+					)
+				}
+				{
+					siteLink && (
+						<Link className="project-link" href={siteLink}>
+							View website
+						</Link>
+					)
+				}
 			</Flex>
 		</Flex>
 	</Box>
