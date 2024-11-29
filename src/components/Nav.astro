@@ -16,8 +16,10 @@ import { Image } from "astro:assets";
 		<Box m="-3">
 			<Flex pt="5" gap="3" align="center">
 				<Image src={logo} alt="opening and closing html tags"></Image>
-				<Heading className="logo-heading" as="h1" size="8">Dior Shelton</Heading
-				>
+				<Link highContrast={true} underline="none" href="/">
+					<Heading className="logo-heading" as="h1" size="8">Dior Shelton</Heading
+						>
+				</Link>
 			</Flex>
 			<Box className="container">
         <Flex gap="5" align="center" direction="row-reverse">

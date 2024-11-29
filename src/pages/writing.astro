@@ -2,27 +2,25 @@
 import { Box, Heading, Container, Text, Flex, Link } from "@radix-ui/themes";
 import Layout from "../layouts/Layout.astro";
 import BlogPost from "../components/BlogPost.astro";
+import Nav from "../components/Nav.astro";
+const posts = [];
 ---
 
 <Layout title="Writing">
+	<Nav/>
 	<Box className="articles">
 		<Heading className="heading" align="center" as="h2" size="8"
 			>Writing
 		</Heading>
 		<Container size="3">
 			<Box className="article-container">
-				<BlogPost className="post"
+				{posts.length? <BlogPost/> : "No blog posts yet. Come back later ;)"	}
+				<!-- <BlogPost
 					date={"December 31, 2024"}
 					blogTitle={"First blog post"}
-					blurb={"This is what the article is about jkldfjklafjdl jkladf lkejkldafjklaf"}
+					blurb={"This is a post"}
 					href={"#"}
-				/>
-				<BlogPost
-					date={"December 31, 2024"}
-					blogTitle={"First blog post"}
-					blurb={"This is what the article is about"}
-					href={"#"}
-				/>
+				/> -->
 			</Box>
 		</Container>
 	</Box>

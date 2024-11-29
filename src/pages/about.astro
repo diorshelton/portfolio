@@ -4,9 +4,11 @@ import Layout from "../layouts/Layout.astro";
 import Image from "astro/components/Image.astro";
 import profilefoto from "../../public/assets/foto.jpeg";
 import ContactMe from "../components/ContactMe.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <Layout title="About">
+	<Nav/>
 	<Box className="about-container">
 		<Container>
 		<Heading className="heading" align="center" as="h2" size="8">About</Heading>
