@@ -1,24 +1,35 @@
 ---
-import { Box, Container, Link, Text } from "@radix-ui/themes";
+import { Box, Container, Flex, Link, Text } from "@radix-ui/themes";
 import Layout from "../layouts/Layout.astro";
 import "@radix-ui/themes/styles.css";
 ---
 
 <Layout title="Dior Shelton">
-	<Box>
-		<Container size="1">
-			<main>
-				<Text size="8"
-					>Welcome! My name is
-					<Link href="/about">Dior.</Link> I build
-					<Link href="/projects">software</Link>
-					and sometimes I
-					<Link href="/writing">write.</Link>
-					This is my digital space.
-				</Text>
-			</main>
-		</Container>
-	</Box>
+	<Flex m="9" direction="column" align="center">
+		<Box display="block">
+			<Container align="center" size="1">
+				<!-- <main> -->
+				<Flex direction="column">
+					<Text size="8">
+						Hi! 
+					</Text>
+					<Text size="8">
+							My name is
+						<Link href="/about">Dior.</Link>
+					</Text>
+					<Text size="8">
+						I build
+						<Link href="/projects">software</Link>
+					</Text>
+					<Text size="8">
+						and sometimes I
+						<Link href="/writing">write.</Link>
+					</Text>
+				</Flex>
+				<!-- </main> -->
+			</Container>
+		</Box>
+	</Flex>
 </Layout>
 
 <style></style>
