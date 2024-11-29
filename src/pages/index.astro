@@ -1,22 +1,24 @@
 ---
-import MobileNavBar from '../components/MobileNavBar.jsx';
-import Layout from '../layouts/Layout.astro';
+import { Box, Container, Link, Text } from "@radix-ui/themes";
+import Layout from "../layouts/Layout.astro";
 import "@radix-ui/themes/styles.css";
 ---
 
-<Layout title="Dior Shelton Developer Portfolio">
-	<main>
-		<MobileNavBar/>
-	</main>
+<Layout title="Dior Shelton">
+	<Box>
+		<Container size="1">
+			<main>
+				<Text size="8"
+					>Welcome! My name is
+					<Link href="/about">Dior.</Link> I build
+					<Link href="/projects">software</Link>
+					and sometimes I
+					<Link href="/writing">write.</Link>
+					This is my digital space.
+				</Text>
+			</main>
+		</Container>
+	</Box>
 </Layout>
 
-<style>
-	/* main {
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	} */
-</style>
+<style></style>
