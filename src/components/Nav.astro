@@ -7,40 +7,55 @@ import {
 	Link,
 	Separator,
 } from "@radix-ui/themes";
-import logo from "../../public/assets/logo.svg"
+import logo from "../../public/assets/logo.svg";
 import { Image } from "astro:assets";
 ---
 
 <nav class="nav">
 	<Container size="3">
-		<Box m="-3">
-			<Flex pt="5" gap="3" align="center">
-				<Image src={logo} alt="opening and closing html tags"></Image>
+		<Box>
+			<Flex m="-3" className="nav-header" pt="5" gap="1" align="center">
+				<Image
+					class="header-logo"
+					src={logo}
+					alt="opening and closing html tags"
+				/>
 				<Link highContrast={true} underline="none" href="/">
-					<Heading className="logo-heading" as="h1" size="8">Dior Shelton</Heading
-						>
+					<Heading className="logo-heading" as="h1" size="8"
+						>Dior Shelton</Heading
+					>
 				</Link>
 			</Flex>
 			<Box className="container">
-        <Flex gap="5" align="center" direction="row-reverse">
-          <Link underline="hover" size="6" className="link-item" href="/about">About</Link>
+				<Flex
+					className="nav-links"
+					gap="4"
+					align="center"
+					direction="row-reverse"
+				>
+					<Link underline="hover" size="6" className="link-item" href="/about"
+						>About</Link
+					>
 					<Separator orientation="vertical" />
 					<Link size="6" className="link-item" href="/writing">Writing</Link>
 					<Separator orientation="vertical" />
 					<Link size="6" className="link-item" href="/projects">Projects</Link>
 				</Flex>
 			</Box>
-    </Box>
+		</Box>
 	</Container>
 </nav>
 <style>
 	.nav {
-		padding: 0.5rem 1rem;
+		padding: 1rem 1rem;
 	}
-	.heading {
-		padding-right: 3rem;
+	.nav-header {
+		padding-bottom: 1.5rem;
 	}
-	img {
+	.container a {
+		padding-left: -4rem;
+	}
+	.header-logo {
 		height: 4.0625rem;
 		width: 4.0625rem;
 	}
