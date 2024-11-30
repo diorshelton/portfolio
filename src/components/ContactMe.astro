@@ -1,43 +1,54 @@
 ---
-import { Box, Flex, Heading } from "@radix-ui/themes";
+import { Box, Heading } from "@radix-ui/themes";
 import {
-	LinkedInLogoIcon,
-	GitHubLogoIcon,
 	EnvelopeClosedIcon,
+	GitHubLogoIcon,
+	LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 ---
 
-<Box className="contact-me-container">
-    <Heading className="contact-me-heading" size="7">Find me @</Heading>
-		<LinkedInLogoIcon className="linkedin icon" />
-		<GitHubLogoIcon className="github icon" />
-		<EnvelopeClosedIcon className="email icon" />
+<Box className="contact-me-container" maxWidth="12rem" maxHeight="12rem">
+	<Heading className="contact-me-heading" size="7"
+		>Find me on</Heading
+	>
+	<Box className="icon-grid">
+		<a target="_blank" href="http://www.linkedin.com/in/diorshelton"
+		>
+		<LinkedInLogoIcon className="linkedin icon"/>
+		</a>
+		<a target="_blank" href="http://www.github.com/diorshelton">
+			<GitHubLogoIcon className="github icon" />
+		</a>
+		<a target="_blank" href="mailto:diorshelton@gmail.com">
+			<EnvelopeClosedIcon className="email icon" />
+		</a>
+	</Box>
 </Box>
 <style>
-  .icon {
-    margin-left: 1.5rem;
-    margin-top: 1.5rem;
-    height: 2rem;
-    width: 2rem;
-  }
-  .icon:hover {
-    cursor: grab;
-  }
+	a {
+		text-decoration: none;
+	}
+	.icon {
+		margin-left: 1.5rem;
+		margin-top: 1.5rem; 
+		height: 2rem;
+		width: 2rem;
+	}
+	.icon:hover {
+		cursor: grab;
+	}
 	.contact-me-container {
+		display: grid;
 		padding-top: 3rem;
+		grid-template-columns: 1fr;
+		grid-template-rows: 33% 33% 33%;
 	}
 	.contact-me-heading {
-    /* margin-top: -12rem; */
-		padding: .5rem;
+		padding: 0.5rem;
 		text-align: center;
 	}
-  .flex-container {
-    @media screen < 950px{
-      flex-direction:row;
-    }
-  }
 	.github:hover {
-		color:  rgb(35, 134, 54, 1);
+		color: rgb(35, 134, 54, 1);
 	}
 	.linkedin:hover {
 		color: rgb(25, 30, 188);

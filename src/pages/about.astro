@@ -2,34 +2,32 @@
 import { Box, Flex, Text, Heading, Container } from "@radix-ui/themes";
 import Layout from "../layouts/Layout.astro";
 import Image from "astro/components/Image.astro";
-import profilefoto from "../../public/assets/foto.jpeg";
 import ContactMe from "../components/ContactMe.astro";
 import Nav from "../components/Nav.astro";
+import me from "../../public/assets/me.jpeg";
 ---
 
 <Layout title="About">
-	<Nav/>
+	<Nav />
 	<Box className="about-container">
 		<Container>
-		<Heading className="heading" align="center" as="h2" size="8">About</Heading>
-			<Flex
-				direction="row"
-				className="flex-container"
-				align="center"
-				justify={"center"}
+			<Heading className="heading" align="center" as="h2" size="8"
+				>About</Heading
 			>
-				<Box className="photo-box-container">
-					<Image class="foto" src={profilefoto} alt="profile picture" />
-				</Box>
-				<Box maxWidth={"25rem"}>
+			<Flex className="flex-container" align="center" direction="column">
+				<!-- <Box className="photo-box-container"> -->
+				<Image class="foto" src={me} alt="profile picture" />
+				<Box>
 					<Text size="4" className="about-text" as="p">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-						tenetur quisquam veritatis ullam dignissimos vel porro in error
-						ipsa, delectus, doloremque nulla odit molestiae laboriosam? Soluta
-						possimus at et est. Lorem ipsum dolor sit amet consectetur
-						adipisicing elit. Et cum eligendi quisquam officiis qui maxime
-						exercitationem maiores est? Laboriosam officiis debitis aliquid
-						distinctio tenetur. Possimus temporibus amet molestiae earum enim!
+						I'm a software engineer from South Carolina that enjoys the study of
+						languages (both human and computer). In previous lives I have worked
+						as an interpreter, an IT support agent and a photographer.
+							Languages and human connection are always at the forefront of my
+							mind.
+							I'm not only interested in the systems of language but also how
+							humans use them to shape reality.
+							When I'm not thinking about language or building software I'm
+							hiking trails, baking or making a playlist.
 					</Text>
 				</Box>
 				<ContactMe />
@@ -39,19 +37,13 @@ import Nav from "../components/Nav.astro";
 </Layout>
 <style>
 	img {
-		padding: 1rem;
 		display: block;
 		max-width: 40rem;
 		max-height: 40rem;
 		width: auto;
 		height: auto;
 	}
-	.flex-container {
-		@media (width <= 950px) {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
+
 	.about-text {
 		padding: 3rem;
 		text-indent: 20%;
