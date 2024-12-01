@@ -1,8 +1,7 @@
 ---
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
-import Nav from "../components/Nav.astro";
-interface Props {
+ interface Props {
 	title: string;
 }
 const { title } = Astro.props;
@@ -21,9 +20,9 @@ const { title } = Astro.props;
 	<body>
 		<Theme
 			hasBackground={true}
-			appearance="light"
-			accentColor="gold"
-			grayColor="sand"
+			appearance="dark"
+			accentColor="blue"
+			grayColor="sage"
 			panelBackground="translucent"
 			scaling="100%"
 			radius="medium"
